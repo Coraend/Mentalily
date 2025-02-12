@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+  	<head>
+    	<meta charset="utf-8">
+    	<title>mentalily</title>
+	  	<link href="csforyou.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	  	<script src="jsmentalily.js"></script>
+				  <style>
+					  body {
+						  animation: fadeInAnimation ease 1.5s;
+						  animation-iteration-count: 1;
+						  animation-fill-mode: forwards;
+					  }
+			  
+					  @keyframes fadeInAnimation {
+						  0% {
+							  opacity: 0;
+						  }
+			  
+						  100% {
+							  opacity: 1;
+						  }
+					  }
+				  </style>
+	</head>
+
+  	<body>		  
+		<nav>	 
+			<div>
+			<ul>
+		  		<li><a class ="nav-logo" href="prolog.html"><img class="logo" src="../Images/ily1.png" alt="Main Page" width="500" height="500"></a></li>
+		  		<li><a href="mentalily.html">.mentalily</a></li>
+		  		<li><a href="foryou.html">.for you</a></li>
+		  		<li><a href="havefun.html">.discussion</a></li>
+		  		<li><a href="sh.html">.seeking help?</a></li>
+			</ul>  
+			</div>
+		</nav>
+	  	  
+	
+		   <script>
+			function showContent(contentType) {
+            const content = document.querySelector('.content');
+            const tabBackground = document.querySelector('.tab-background');
+            content.classList.add('hidden');
+            setTimeout(() => {
+                if (contentType === 'you') {
+                    content.innerHTML = `
+                        <!-- Marah -->
+			<div class="emotion" onclick="toggleAnswer('answer1')">
+				<span>MARAH</span>
+			</div>
+			<div id="answer1" class="answer">
+				Kita pasti pernah marah, dan itu hal yang lumrah. Tapi kalau emosi itu terlalu sering kita rasakan, bisa jadi malah men<i>distract</i> kita dari rutinitas. Kita perlu tau gimana caranya menanggapi itu.
+				<div class="grid-emosi">
+					<div class="video-napas">
+						<div class="embed-video-napas" onclick="window.open('https://www.youtube.com/watch?v=cZJAsW_5SRA')" style="cursor: pointer;">
+							<img src="../Images/playbutton.png" alt="Click This!">
+						</div>
+					</div>
+					<div class="napas">
+						<h1>Atur Napas</h1>
+						<p>Kadangkala satu-satunya cara buat redakan amarah kita yang meledak-ledak itu adalah dengan menyadari kita lagi marah dan ambil waktu untuk sekadar <b>atur napas.</b></p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Sedih -->
+			<div class="emotion" onclick="toggleAnswer('answer2')">
+				<span>SEDIH</span>				
+			</div>
+			<div id="answer2" class="answer">
+				Kesedihan itu kayak perasaan yang bikin kita ngerasa rentan, ngingetin kita tentang kehilangan dan harapan, terus kadang ada juga kekuatan yang muncul dari balik air mata. Tapi kita harus inget, <b>berkutat dalam kesedihan terlalu lama itu ga baik!</b>
+				<div class="grid-emosi">
+					<div class="video-napas">
+						<div class="embed-video-napas" onclick="window.open('https://youtu.be/cEqZthCaMpo?si=dXkv_N012g7uYL_P')" style="cursor: pointer;">
+							<img src="../Images/playbutton.png" alt="Click This!">
+						</div>
+					</div>
+					<div class="napas">
+						<h1>Ambil Waktu</h1>
+						<p>Salah satu cara paling mudah buat ngatasi rasa sedih adalah dengan <b>ngobrol sama teman atau orang terdekat</b>, karena kadang cuma butuh didengar aja. Selain itu, meluangkan waktu untuk beraktivitas yang kita suka, kayak nonton film atau jalan-jalan, bisa bikin suasana hati jadi lebih baik. Bisa juga dengan menenangkan diri dengan meditasi kayak video di samping ini!</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Cemas --> 
+			<div class="emotion" onclick="toggleAnswer('answer3')">
+				<span>CEMAS</span>				
+			</div>
+			<div id="answer3" class="answer">
+				Cemas itu kayak perasaan yang selalu nempel, bikin kita mikir berlebihan tentang hal-hal yang belum terjadi. Rasanya seakan ada beban yang terus mengganggu pikiran, sulit untuk fokus pada hal lain.
+				<div class="grid-emosi">
+					<div class="video-napas">
+						<div class="embed-video-napas" onclick="window.open('https://youtu.be/c1Ndym-IsQg?si=E-4LDQTeBPcBDEWq')" style="cursor: pointer;">
+							<img src="../Images/playbutton.png" alt="Click This!">
+						</div>
+					</div>
+					<div class="napas">
+						<h1>Kuncinya Ada di Pikiran</h1>
+						<p>Kita bisa kok coba mengatasi rasa ini, dan yang paling mudah untuk kita lakuin itu dengan menarik napas dalam-dalam dan mencoba kendalikan pikiran atau cukup diam dan nikmati waktu dengan diri kita sendiri. Memang rasa ini ga akan pernah bisa hilang sepenuhnya, tapi buat dikendalikan? Sangat bisa!</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Takut -->
+			<div class="emotion" onclick="toggleAnswer('answer4')">
+				<span>TAKUT</span>				
+			</div>
+			<div id="answer4" class="answer">
+				Takut sering kali muncul pas kita menghadapi hal-hal yang ga pasti, seolah-olah ada yang akan menghakimi kita kalau kita berbuat salah. Perasaan ini bisa bikin kita merasa terjebak dan sulit untuk melangkah maju. Padahal belum tentu hal yang ga pasti ini beneran jahat.
+				<div class="grid-emosi">
+					<div class="video-napas">
+						<div class="embed-video-napas" onclick="window.open('https://youtu.be/s41tJnY7ZbM?si=U1hKfRbrj0DtlCZe')" style="cursor: pointer;">
+							<img src="../Images/playbutton.png" alt="Click This!">
+						</div>
+					</div>
+					<div class="napas">
+						<h1>Kuncinya Ada di Pikiran</h1>
+						<p>Kita bisa kok coba mengatasi rasa ini, dan yang paling mudah untuk kita lakuin itu dengan menarik napas dalam-dalam dan mencoba kendalikan pikiran atau cukup diam dan nikmati waktu dengan diri kita sendiri. Memang rasa ini ga akan pernah bisa hilang sepenuhnya, tapi buat dikendalikan? Sangat bisa!</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Sepi -->
+			<div class="emotion" onclick="toggleAnswer('answer5')">
+				<span>SEPI</span>				
+			</div>
+			<div id="answer5" class="answer">
+				Sepi kadang jadi teman yang ga kita pengen, bikin kita merasa ga punya tempat di mana pun atau keingetan sama kenangan.
+				Ketika semua kerasa sunyi, kita sering kali terjebak dalam pikiran sendiri dan akhirnya beranjak ke emosi negatif lain.
+				<div class="grid-emosi">
+					<div class="video-napas">
+						<div class="embed-video-napas" onclick="window.open('https://www.youtube.com/watch?v=0b9Qzow_lv0&pp=ygUSbWVuZ2F0YXNpIGtlc2VwaWFu')" style="cursor: pointer;">
+							<img src="../Images/playbutton.png" alt="Click This!">
+						</div>
+					</div>
+					<div class="napas">
+						<h1>Ayo Beranjak!</h1>
+						<p>
+							Kita bisa coba cari aktivitas yang melibatkan interaksi sama orang lain atau aktivitas sosial. 
+							Selain itu, ngelakuin hobi baca atau nulis juga <i>unexpectedly</i> bisa jadi cara seru buat ngisi waktu dan alihkan pikiran.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Stres -->
+			<div class="emotion" onclick="toggleAnswer('answer6')">
+				<span>STRES</span>				
+			</div>
+			<div id="answer6" class="answer">
+				Stres memang udah jadi kaya sarapan di zaman ini, ga ada manusia yang hidup tanpa dia.
+				Kadang ada kalanya kita ngerasa kayanya kepala kita bisa meledak karena segala tuntutan yang datang bertubi-tubi.
+				<div class="grid-emosi">
+					<div class="video-napas">
+						<div class="embed-video-napas" onclick="window.open('https://youtu.be/4iPVQlKFvlM?si=CNGmDkneE28e3Yb7')" style="cursor: pointer;">
+							<img src="../Images/playbutton.png" alt="Click This!">
+						</div>
+					</div>
+					<div class="napas">
+						<h1>Relaksasi</h1>
+						<p>
+							Luangin waktu buat istirahat dan coba aktivitas fisik ringan, kayak jalan-jalan atau yoga, bisa banget bikin stres berkurang. 
+							Bisa juga deh coba nulis jurnal tentang perasaan kita, biar semuanya jadi lebih jelas dan teratur. 
+							Kita juga tetep perlu inget kalau stres itu ga selamanya beban, dia juga sering jadi pendorong kita buat maju lebih jauh!
+						</p>
+					</div>
+				</div>
+			</div>
+                    `;
+                    document.querySelector('.tab.you').classList.add('active');
+                    document.querySelector('.tab.someone-else').classList.remove('active');
+                    tabBackground.style.left = '0';
+                } else {
+                    content.innerHTML = `
+                        <div class="emotion" onclick="toggleAnswer('answer1')">
+				<span>Sertifikat 'Be There'</span>
+			</div>
+			<div id="answer1" class="answer">
+				Belajarlah untuk mendukung seseorang yang sedang berjuang dengan kesehatan mentalnya melalui kursus daring yang dibuat oleh Jack.org bekerja sama dengan Born This Way Foundation.				<div class="grid-emosi">
+					<div class="link-napas">
+						<div class="embed-link-napas" onclick="window.open('https://www.betherecertificate.org/')" style="cursor: pointer;">
+							<p>Click Here!</p>
+						</div>
+					</div>
+					<div class="napas">
+						<h1>Be There Sertificate</h1>
+						<p>Sertifikat Be There adalah program gratis dan dapat diikuti sesuai keinginan yang membantu kaum muda belajar mendukung mereka yang menghadapi tantangan kesehatan mental.</b></p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Sedih -->
+			<div class="emotion" onclick="toggleAnswer('answer2')">
+				<span>A.S.K.</span>				
+			</div>
+			<div id="answer2" class="answer">
+				Metode A.S.K. adalah pendekatan sederhana untuk mendukung seseorang dengan masalah kesehatan mental dengan menunjukkan pengertian, mendengarkan tanpa menghakimi, dan menghubungkan mereka dengan sumber daya jika diperlukan.				<div class="grid-emosi">
+					<div class="video-napas">
+						<div class="embed-video-napas" onclick="window.open('https://www.youtube.com/watch?v=dkfnu1uq1J8')" style="cursor: pointer;">
+							<img src="../Images/playbutton.png" alt="Click This!">
+						</div>
+					</div>
+					<div class="napas">
+						<h1>A.S.K Method</h1>
+						<p>Ngerasa hidup kamu lagi nggak oke? Mungkin metode A.S.K. bisa jadi jawabannya. Ini tuh kayak 'hack' buat otak kamu, biar bisa lebih tenang dan bahagia. Gampang kok dilakuin, dan hasilnya? Dijamin bikin hidup kamu jadi lebih berwarna!</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Cemas --> 
+			<div class="emotion" onclick="toggleAnswer('answer3')">
+				<span>Hubungi Dukungan dan Layanan Lokal</span>				
+			</div>
+			<div id="answer3" class="answer-3">
+					Cobalah untuk menghubungi layanan dan dukungan dari program-program kesehatan mental yang ada di sekitar Anda! Dengan menghubungi layanan dan dukungan lokal Anda dapat meminta bantuan dan dukungan tentang bagaiaman Anda harus bertindak jika seseorang membutuhkan Support dari Anda!
+					<h1>Ayo Hubungi!</h1>
+					<p>Pastinya akan banyak dukungan dan layanan lokal yang dapat membantu Anda! Coba yuk! Dan tidak perlu takut!</p>
+			</div>
+
+                    `;
+                    document.querySelector('.tab.someone-else').classList.add('active');
+                    document.querySelector('.tab.you').classList.remove('active');
+                    tabBackground.style.left = '50%';
+                }
+                content.classList.remove('hidden');
+            }, 500);
+        }
+		</script>
+		  <body onload="showContent('you')">
+			<div class="tab-container">
+				<div class="tab-background"></div>
+				<button class="tab you" onclick="showContent('you')">Support for You</button>
+				<button class="tab someone-else" onclick="showContent('someone-else')">Support for Someone Else</button>
+			</div>
+			<div class="content">
+				<!-- Content will be dynamically inserted here -->
+			</div>
+			
+		<footer class="foot">
+			<p style="color: #243642"><a href="https://www.instagram.com/coraendology/" target="_blank">.ramakusha</a> | <a href="https://www.instagram.com/heskhyyyaa" target="_blank">.moses</a></p>
+		</footer>
+		
+		<script>
+		function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.classList.contains('open')) {
+                answer.classList.remove('open');
+            } else {
+                answer.classList.add('open');
+            }
+        }
+		</script>
+
+	</body>
+</html>
